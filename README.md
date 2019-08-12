@@ -15,13 +15,17 @@ ionic serve
 add page
 
 ```
-ionic generate page pages/about
+ionic generate page pages/shop
+ionic generate page pages/message
+ionic generate page pages/me
+ionic generate page pages/cart
 ```
 
 add service
 
 ```
 ionic generate service api/user
+ionic generate service api/product
 ```
 
 安装组件
