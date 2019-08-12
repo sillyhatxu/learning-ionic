@@ -12,6 +12,18 @@ ionic start
 ionic serve
 ```
 
+add page
+
+```
+ionic generate page pages/about
+```
+
+add service
+
+```
+ionic generate service api/user
+```
+
 安装组件
 
 ```
@@ -25,4 +37,16 @@ build ios or android
 ```
 ionic cordova platform add ios
 ionic cordova platform add android
+```
+
+[ionic client](https://ionicframework.com/docs/cli/commands/generate)
+
+```
+ionic generate
+ionic generate page
+ionic generate page contact
+ionic generate component contact/form
+ionic generate component login-form --change-detection=OnPush
+ionic generate directive ripple --skip-import
+ionic generate service api/user
 ```
