@@ -1,14 +1,27 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      First Ionic App
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+  <ion-item color=dark>
+    <ion-label>Rest Duration</ion-label>
+    <ion-datetime displayFormat="HH:mm:ss" placeholder="Tap here" [(ngModel)]="fullTime"></ion-datetime>
+    <!-- <ion-datetime displayFormat="MMM DD, YYYY HH:mm:ss" placeholder="Tap here" [(ngModel)]="fullTime"></ion-datetime> -->
+  </ion-item>
+  <!-- <circle-progress (click)="startTime()" [percent]="percent" [maxPercent]="100" [radius]="100" [outerStrokeWidth]="16"
+    [innerStrokeWidth]="8" [outerStrokeColor]="'#78C000'" [innerStrokeColor]="'#C7E596'" [animation]="true"
+    [animationDuration]="300">
+  </circle-progress> -->
+
+  <circle-progress (click)="startTime()" [percent]="percent" [maxPercent]="100" [radius]="radius" [toFixed]="0"
+    [showZeroOuterStroke]="true" [outerStrokeGradient]="true">
+  </circle-progress>
+  <!-- <circle-progress (click)="startTime()" [percent]="percent" [maxPercent]="100" [radius]="radius" [showTitle]="false"
+    [showSubtitle]="false" [showUnits]="false" [showInnerStroke]="false" [backgroundStrokeWidth]="3"
+    [outerStrokeGradient]="true" [outerStrokeWidth]="16"  [outerStrokeColor]="'#78C000'"
+    [innerStrokeColor]="'#C7E596'"></circle-progress> -->
 </ion-content>
