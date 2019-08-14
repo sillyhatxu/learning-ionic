@@ -63,6 +63,7 @@ ionic generate service api/user
 ```
 
 
+
 ## Develop Process
 
 > ionic start
@@ -96,8 +97,41 @@ canLoad() {
 
 > 新增 tutorial-routing.module.ts 为每一个组件配置routing
 >
-> ionic generate page pages/tabs
+
+```bash
+ionic generate page pages/tabs
+ionic generate page pages/shop
+ionic generate page pages/shipping
+ionic generate page pages/message
+ionic generate page pages/me
+```
 > 
+> TabsPageModule 需要导入tab组件Module
+
+```ts
+@NgModule({
+  imports: [
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    ShopPageModule,
+    ShippingPageModule,
+    MessagePageModule,
+    MePageModule,
+    RouterModule.forChild(routes)
+  ],
+  declarations: [TabsPage]
+})
+export class TabsPageModule { }
+```
+
+> tab="shipping"是url跳转链接，ion-icon是图片，ion-label是tag名字
+```html
+    <ion-tab-button tab="shipping">
+      <ion-icon name="cart"></ion-icon>
+      <ion-label>Shipping</ion-label>
+    </ion-tab-button>
+```
 > ionic xxxxxxxxxxxxxxx
 > 
 > ionic xxxxxxxxxxxxxxx
@@ -134,4 +168,14 @@ canLoad() {
 
 ```
 import { IonicStorageModule } from '@ionic/storage';
+```
+
+
+
+
+## 打开app画面
+
+```bash
+ionic cordova plugin add cordova-plugin-splashscreen
+npm install @ionic-native/splash-screen
 ```
