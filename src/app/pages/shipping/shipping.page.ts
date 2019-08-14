@@ -11,5 +11,4 @@ export class ShippingPage implements OnInit {
 
   ngOnInit() {
   }
-
 }

@@ -1,13 +1,11 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { TutorialService } from './api/tutorial.service';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
-  { path: 'shop', loadChildren: './pages/shop/shop.module#ShopPageModule' },
-  { path: 'message', loadChildren: './pages/message/message.module#MessagePageModule' },
-  { path: 'me', loadChildren: './pages/me/me.module#MePageModule' },
-  { path: 'shipping', loadChildren: './pages/shipping/shipping.module#ShippingPageModule' },
+  { path: '', redirectTo: '/tutorial', pathMatch: 'full' },
+  { path: 'tutorial', loadChildren: () => import('./pages/tutorial/tutorial.module').then(m => m.TutorialPageModule), canLoad: [TutorialService] },
+  { path: 'app', loadChildren: () => import('./pages/tabs/tabs.module').then(m => m.TabsPageModule) },
 ];
 
 @NgModule({

@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
-
 import { IonicModule } from '@ionic/angular';
 
 import { ShopPage } from './shop.page';
@@ -21,6 +20,7 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
+  exports: [RouterModule],
   declarations: [ShopPage]
 })
-export class ShopPageModule {}
+export class ShopPageModule { }
